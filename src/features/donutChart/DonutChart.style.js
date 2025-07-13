@@ -25,8 +25,12 @@ export const styles = StyleSheet.create({
     borderColor: '#ddd',
   },
   title: {
-    marginTop: 50,
+    marginTop: 10,
     fontSize: 20,
     marginBottom: 10,
+    fontWeight: '700',
+    fontFamily: 'Open Sans-SemiBold',
+    color: '#333',
+    textAlign: 'center',
   },
 });

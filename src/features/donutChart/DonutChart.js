@@ -13,6 +13,7 @@ const DonutChart = ({ debit = DEFAULT_DEBIT, credit = DEFAULT_CREDIT },navigatio
     <View style={styles.container}>
      <Header title="Dashboard" onBack={() => navigation.goBack()} />
      <Image source={{ uri: imageUrl }} style={styles.chart} resizeMode="contain" />
+     <Text style={styles.title}>10000.00</Text>
     </View>
 
   );
