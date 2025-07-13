@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f4f4f4',
+   // backgroundColor: '#f4f4f4',
     height: 60,
     width: '100%',
     
@@ -14,6 +14,7 @@ export const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
+        width: '100%',
     
   },
   title: {
