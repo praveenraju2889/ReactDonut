@@ -5,6 +5,7 @@ import { LoginScreen } from './src/screens/Login';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {
