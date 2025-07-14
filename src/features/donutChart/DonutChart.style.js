@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
+    fontFamily: 'OpenSans-SemiBold',
   },
   chart: {
     marginTop: 10,
@@ -29,9 +30,9 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 20,
     marginBottom: 10,
-    fontWeight: '700',
-    fontFamily: 'OpenSans-SemiBold.ttf',
+    fontSize: 22,
+    fontFamily: 'OpenSans-Bold',
     color: '#333',
-    textAlign: 'center',
+    fontWeight: 'bold'
   },
 });

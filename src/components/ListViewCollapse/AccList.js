@@ -10,8 +10,11 @@ import {
   Platform
 } from 'react-native';
 import { styles } from './AccList.styles';
-import Icon from 'react-native-vector-icons/Ionicons';
 
+//import Icon from 'react-native-vector-icons/MaterialIcons';
+//import Icon from 'react-native-vector-icons/FontAwesome';
+//const myIcon = <Icon name="rocket" size={30} color="#900" />;
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; // Using MaterialCommunityIcons for expand/collapse icons
 
 
 // Enable LayoutAnimation on Android
@@ -20,11 +23,11 @@ if (Platform.OS === 'android') {
 }
 
 const data = [
-  { id: '1', title: 'Accounts', content: 'XXX XXX XXX 1234',amt: '10000 AED' },
-  { id: '2', title: 'Debit Card', content: 'XXX XXX XXX 1234',amt: '10000 AED' },
-  { id: '3', title: 'Credit Card', content: 'XXX XXX XXX 1234' ,amt: '10000 AED'},
-    { id: '4', title: 'Credit Card', content: 'XXX XXX XXX 1234' ,amt: '10000 AED'},
-      { id: '5', title: 'Credit Card', content: 'XXX XXX XXX 1234',amt: '10000 AED'}
+  { id: '1', title: 'Accounts', content: 'XXX XXX XXX 1234',amt: '\uE001 10000.00'},
+  { id: '2', title: 'Debit Card', content: 'XXX XXX XXX 1234',amt: '\uE001 10000' },
+  { id: '3', title: 'Credit Card', content: 'XXX XXX XXX 1234' ,amt: '\uE001 10000'},
+  { id: '4', title: 'Loans', content: 'XXX XXX XXX 1234' ,amt: '\uE001 10000'},
+  { id: '5', title: 'Deposit', content: 'XXX XXX XXX 1234',amt: '\uE001 10000'}
 
 ];
 const CollapsingList = () =>{
@@ -43,16 +46,18 @@ const CollapsingList = () =>{
         <TouchableOpacity style={styles.header} onPress={() => toggleSection(index)}>
           <Text style={styles.headerText}>{item.title}</Text>
           <Icon
-            name={isActive ? 'chevron-up-outline' : 'chevron-down-outline'}
+            name={isActive ? 'chevron-up' : 'chevron-down'} // Using plus for collapsed and minus for expanded
             size={24}
             color="#333"
           />
+
+
         </TouchableOpacity>
 
         {isActive && (
           <View style={styles.content}>
             <Text>{item.content}</Text>
-            <Text>{item.amt}</Text>
+            <Text style={styles.subText}>{item.amt}</Text>
           </View>
         )}
       </View>

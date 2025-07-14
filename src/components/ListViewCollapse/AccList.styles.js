@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-
 export const styles = StyleSheet.create({
   section: {
     flex: 1,
@@ -24,7 +23,14 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   content: {
-    padding: 15,
+    padding: 11,
     backgroundColor: '#fff'
-  }
+  },
+  subText: {
+    marginTop: 10,
+    fontSize: 16,
+    fontFamily: 'OpenSans-Bold',
+    color: '#333',
+    fontWeight: 'bold'
+  },
 });
