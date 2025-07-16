@@ -15,7 +15,7 @@ const LoginScreen = ({ navigation }) => {
     try {
       const result = await login(username, password);
       if (result) {
-        Alert.alert('Login Successful', result.message);
+        //Alert.alert('Login Successful', result.message);
         navigation.navigate('Dashboard');
       } else {
         Alert.alert('Login Failed', result.message);
