@@ -3,6 +3,7 @@ import { View, Image, Text, ScrollView, Button } from 'react-native';
 import { styles } from './Dashboard.styles';
 import { Header } from '../../components/Header';
 import { useNavigation } from '@react-navigation/native';
+import FooterMenu from '../../components/Footer/FooterMenu'; // Importing FooterMenu component
 
 import { CollapsingList } from '../../components/ListViewCollapse'; // Importing AccList component
 
@@ -14,11 +15,12 @@ const Dashboard = ({ debit = 4000, credit = 4000 }) => {
     const imageUrl = `${serverIp}/donut-chart?debit=${debit}&credit=${credit}`;
 
     return (
+        <View style={{ flex: 1, backgroundColor: '#f5f5f5' }}>
         <ScrollView style={styles.scrollContainer}>
 
             <View style={{ flex: 1 }}>
                 <View style={styles.container}>
-                    <Header title="Dashboard" onBack={() => navigation.goBack()} />
+                    <Header title="Account Summary" onBack={() => navigation.goBack()} />
                     <Image source={{ uri: imageUrl }} style={styles.chart} resizeMode="contain" />
                     <Text style={styles.title}>{total}</Text>
                 </View>
@@ -29,6 +31,9 @@ const Dashboard = ({ debit = 4000, credit = 4000 }) => {
             </View>
 
         </ScrollView>
+          <FooterMenu />
+
+        </View>
     );
 };
 

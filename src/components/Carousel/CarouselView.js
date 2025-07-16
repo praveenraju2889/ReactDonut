@@ -36,8 +36,8 @@ const CarouselView = ({ route }) => {
     };
 
     return (
-        <View style={{ flex: 1, backgroundColor: '#fff', padding: 10 }}>
-            <View style={{ alignItems: 'center', marginTop: 20 ,paddingBottom: 20,marginBottom:2}}>
+        <View style={{  backgroundColor: '#ffffffff', padding: 10 }}>
+            <View style={{ alignItems: 'center', marginTop: 20 ,marginBottom: 3}}>
             <Carousel
                 data={data}
                 renderItem={renderItem}
@@ -59,7 +59,7 @@ const CarouselView = ({ route }) => {
             />
             
         </View>
-            {/* <CollapsingList /> */}
+           
         </View>
         
 
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 4, height: 0 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
+        
         //elevation: 2,
     },
     activeCard: {

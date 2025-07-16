@@ -79,7 +79,7 @@ const CollapsingList = () => {
                 data={data}
                 keyExtractor={(item) => item.id}
                 renderItem={renderItem}
-                contentContainerStyle={{ paddingBottom: 80 }}
+                contentContainerStyle={{ paddingBottom: 20 }}
             />
         </View>
     );
