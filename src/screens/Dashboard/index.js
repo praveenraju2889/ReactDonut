@@ -1,0 +1,1 @@
+export { default as Dashboard } from './Dashboard'; // Exporting the Dashboard component

@@ -11,18 +11,16 @@ const DonutChart = ({ debit = DEFAULT_DEBIT, credit = DEFAULT_CREDIT }, navigati
   const imageUrl = `${serverIp}/donut-chart?debit=${debit}&credit=${credit}`;
 
   return (
-    <ScrollView style={styles.scrollContainer}>
+   
 
-    <View style={{ flex: 1 }}>
+    <View style={{  }}>
       <View style={styles.container}>
-        <Header title="Dashboard" onBack={() => navigation.goBack()} />
         <Image source={{ uri: imageUrl }} style={styles.chart} resizeMode="contain" />
         <Text style={styles.title}>{total}</Text>
-      </View>    
-        <CollapsingList /> {/* Using the AccList component */}
+      </View>        
     </View>
 
-    </ScrollView>
+   
   );
 };
 
