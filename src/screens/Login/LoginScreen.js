@@ -32,10 +32,7 @@ const LoginScreen = ({ navigation }) => {
     }
     // Mock login success
     //Alert.alert('Success', `Welcome, ${username}!`);
-    //<Stack.Screen name="DonutChart" component={DonutChart} />
     navigation.navigate('Donut', { username }); // Navigate to DonutChart screen
-
-    ///navigation.navigate('DonutChart'); // Example navigation
   };
 
   return (

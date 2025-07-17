@@ -4,29 +4,39 @@ import { LoginScreen } from './src/screens/Login';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { DetailsScreen } from './src/screens/DetailsScreen';
-import { Dashboard } from './src/screens/Dashboard'; 
-import { TransferScreen } from './src/screens/TransferScreen'; // Importing Transfers screen
+import { Dashboard } from './src/screens/Dashboard';
+import { TransferScreen } from './src/screens/TransferScreen';
+import { NotificationsScreen } from './src/screens/NotificationScreen';
+import { ProfileScreen } from './src/screens/ProfileScreen';
+import { SettingsScreen } from './src/screens/SettingsScreen';
+import { HomeScreen } from './src/screens/HomeScreen';
+//import { DrawerNavigator } from './src/navigation/DrawerNavigator'; // Importing DrawerNavigator
+// Assuming HomeScreen is defined in
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  
+
   // return  (
   // <View>
   //   <LoginScreen />
   // </View>
   // );
-return (
-  <NavigationContainer>
+  return (
+    <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
         <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
-        {/* Adding Transfers screen */}
-        <Stack.Screen name="TransferScreen" component={TransferScreen} />        
+        <Stack.Screen name="TransferScreen" component={TransferScreen} />
+        <Stack.Screen name="Notifications" component={NotificationsScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
+        <Stack.Screen name='Home' component={HomeScreen} />
       </Stack.Navigator>
+
     </NavigationContainer>
-);
+  );
 };
 
 export default App;

@@ -26,7 +26,7 @@ const Dashboard = ({ debit = 4000, credit = 4000 }) => {
                 </View>
                 <CollapsingList /> {/* Using the AccList component */}
                 <View style={styles.buttonContainer}>
-                    <Button style={styles.button} title='TransferScreen' onPress={() => navigation.navigate('TransferScreen')} />
+                    <Button style={styles.button} title='Transfers' onPress={() => navigation.navigate('TransferScreen')} />
                     </View>
             </View>
 
