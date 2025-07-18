@@ -11,9 +11,19 @@ import { ProfileScreen } from '../screens/ProfileScreen';
 import { SettingsScreen } from '../screens/SettingsScreen';
 import { HomeScreen } from './src/screens/HomeScreen'; 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useNavigation } from '@react-navigation/native';
 
 
 function CustomDrawerContent(props) {
+
+          const navigation = useNavigation();
+  
+  const handleLogout = () => {
+  navigation.reset({
+    index: 0,
+    routes: [{ name: 'Login' }],
+  });
+};
   return (
     <DrawerContentScrollView {...props}>
       <DrawerItem
@@ -39,7 +49,7 @@ function CustomDrawerContent(props) {
       <DrawerItem
         label="Logout"
         icon={() => <Icon name="logout" size={20} />}
-        onPress={() => props.navigation.navigate('LoginScreen')}
+        onPress={() => handleLogout()}
       />
     </DrawerContentScrollView>
   );
@@ -80,13 +90,14 @@ const DrawerNavigator = () => (
     <Drawer.Screen name="Profile" component={ProfileScreen} />
     <Drawer.Screen name="Settings" component={SettingsScreen} />
     <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+
   </Drawer.Navigator>
 );
 
 // Root navigator
 const AppNavigator = () => (
   <Stack.Navigator screenOptions={{ headerShown: true }}>
-    <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: true, title: 'Login' }} />
+    <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: true, title: 'Login'}} />
     <Stack.Screen name="Dashboard" component={DrawerNavigator} options={{ headerShown: false }}/>
     <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
     <Stack.Screen name="TransferScreen" component={TransferScreen} />
