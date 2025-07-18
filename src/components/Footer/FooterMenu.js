@@ -17,23 +17,23 @@ const FooterMenu = () => {
   return (
     <SafeAreaView>
       <Animated.View style={[styles.footer, { transform: [{ translateY: slideAnim }] }]}>
-        <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate('Home')}>
-          <Icon name="home" size={28} color="#555" />
-          <Text style={styles.iconLabel}>Home</Text>
+        <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate('TransferScreen')}>
+          <Icon name="transfer" size={28} color="#fff" />
+          <Text style={styles.iconLabel}>Transfers</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate('Profile')}>
-          <Icon name="account" size={28} color="#555" />
-          <Text style={styles.iconLabel}>Profile</Text>
+        <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate('TransferScreen')}>
+          <Icon name="cash" size={28} color="#fff" />
+          <Text style={styles.iconLabel}>Payments</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate('Notifications')}>
-          <Icon name="bell" size={28} color="#555" />
-          <Text style={styles.iconLabel}>Alerts</Text>
+        <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate('TransferScreen')}>
+          <Icon name="account" size={28} color="#fff" />
+          <Text style={styles.iconLabel}>My Account</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate('Settings')}>
-          <Icon name="cog" size={28} color="#555" />
+          <Icon name="cog" size={28} color="#fff" />
           <Text style={styles.iconLabel}>Settings</Text>
         </TouchableOpacity>
       </Animated.View>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#005a96ff',
     paddingVertical: 12,
     borderRadius: 20,
     margin: 10,
@@ -61,8 +61,12 @@ const styles = StyleSheet.create({
   },
   iconLabel: {
     fontSize: 12,
-    color: '#555',
+    color: '#fff',
     marginTop: 4,
+    fontFamily: 'OpenSans-SemiBold',
+    textAlign: 'center',
+    //width: 70, // Ensure text fits within button
+    fontWeight: 'bold',
   },
 });
 
