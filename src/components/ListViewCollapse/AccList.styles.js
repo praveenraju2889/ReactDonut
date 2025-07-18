@@ -9,22 +9,39 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
     elevation: 2,
     width: '90%',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1, 
+    shadowRadius: 4,
+    marginBottom: 10
+
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 15,
-    backgroundColor: '#ddd'
-  },
+    backgroundColor: '#ddd',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },  
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    
+    elevation: 1,},
   headerText: {
     fontSize: 16,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },  
   },
   content: {
     padding: 11,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
   subText: {
     marginTop: 10,

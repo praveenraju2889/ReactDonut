@@ -17,6 +17,7 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     fontFamily: 'OpenSans-SemiBold',
+    marginBottom: 10,
   },
   chart: {
     marginTop: 10,

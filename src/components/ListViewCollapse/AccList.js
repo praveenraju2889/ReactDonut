@@ -20,15 +20,8 @@ if (Platform.OS === 'android') {
     UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-const data = [
-    { id: '1', title: 'Accounts', content: 'XXX XXX XXX 1234', amt: '\uE001 10000.00' },
-    { id: '2', title: 'Debit Card', content: 'XXX XXX XXX 1234', amt: '\uE001 10000' },
-    { id: '3', title: 'Credit Card', content: 'XXX XXX XXX 1234', amt: '\uE001 10000' },
-    { id: '4', title: 'Loans', content: 'XXX XXX XXX 1234', amt: '\uE001 10000' },
-    { id: '5', title: 'Deposit', content: 'XXX XXX XXX 1234', amt: '\uE001 10000' }
 
-];
-const CollapsingList = () => {
+const CollapsingList = ({data,onItemPress}) => {
     const [activeIndex, setActiveIndex] = useState(null);
     const navigation = useNavigation();
 
@@ -61,7 +54,7 @@ const CollapsingList = () => {
 
                 {isActive && (
                     <View style={styles.content}>
-                        <TouchableOpacity key={`item-${item.id}`} onPress={() => handleRowPress(item)}>
+                        <TouchableOpacity key={`item-${item.id}`} onPress={() => onItemPress(item)}>
 
                             <Text>{item.content}</Text>
                             <Text style={styles.subText}>{item.amt}</Text>
