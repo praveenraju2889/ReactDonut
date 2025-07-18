@@ -15,7 +15,7 @@ const Dashboard = ({ debit = 4000, credit = 4000 }) => {
     const imageUrl = `${serverIp}/donut-chart?debit=${debit}&credit=${credit}`;
 
     return (
-        <View style={{ flex: 1, backgroundColor: '#f5f5f5' }}>
+        <View style={{ flex: 1, backgroundColor: '#f5f5f5' }}>         
         <ScrollView style={styles.scrollContainer}>
 
             <View style={{ flex: 1 }}>

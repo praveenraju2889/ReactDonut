@@ -1818,6 +1818,14 @@
   dependencies:
     nanoid "^3.3.11"
 
+"@react-navigation/stack@^7.4.2":
+  version "7.4.2"
+  resolved "https://registry.npmjs.org/@react-navigation/stack/-/stack-7.4.2.tgz"
+  integrity sha512-QlqBxKBfKVx/XRH04pRRGQ92tO1fV0RL7YEw5G4pew6CNY26102dVQl5A39ZztvlvEDQbCQkatyDS7i2xR1QiA==
+  dependencies:
+    "@react-navigation/elements" "^2.5.2"
+    color "^4.2.3"
+
 "@sideway/address@^4.1.5":
   version "4.1.5"
   resolved "https://registry.npmjs.org/@sideway/address/-/address-4.1.5.tgz"
@@ -5816,7 +5824,12 @@ react-native-gesture-handler@^2.27.1, "react-native-gesture-handler@>= 2.0.0", r
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
 
-react-native-is-edge-to-edge@^1.1.7, react-native-is-edge-to-edge@1.1.7:
+react-native-is-edge-to-edge@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.2.1.tgz"
+  integrity sha512-FLbPWl/MyYQWz+KwqOZsSyj2JmLKglHatd3xLZWskXOpRaio4LfEDEz8E/A6uD8QoTHW6Aobw1jbEwK7KMgR7Q==
+
+react-native-is-edge-to-edge@1.1.7:
   version "1.1.7"
   resolved "https://registry.npmjs.org/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.1.7.tgz"
   integrity sha512-EH6i7E8epJGIcu7KpfXYXiV2JFIYITtq+rVS8uEb+92naMRBdxhTuS8Wn2Q7j9sqyO0B+Xbaaf9VdipIAmGW4w==
@@ -5854,13 +5867,13 @@ react-native-safe-area-context@^5.5.2, "react-native-safe-area-context@>= 4.0.0"
   resolved "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-5.5.2.tgz"
   integrity sha512-t4YVbHa9uAGf+pHMabGrb0uHrD5ogAusSu842oikJ3YKXcYp6iB4PTGl0EZNkUIR3pCnw/CXKn42OCfhsS0JIw==
 
-react-native-screens@^4.11.1, "react-native-screens@>= 4.0.0":
-  version "4.11.1"
-  resolved "https://registry.npmjs.org/react-native-screens/-/react-native-screens-4.11.1.tgz"
-  integrity sha512-F0zOzRVa3ptZfLpD0J8ROdo+y1fEPw+VBFq1MTY/iyDu08al7qFUO5hLMd+EYMda5VXGaTFCa8q7bOppUszhJw==
+react-native-screens@^4.13.1, "react-native-screens@>= 4.0.0":
+  version "4.13.1"
+  resolved "https://registry.npmjs.org/react-native-screens/-/react-native-screens-4.13.1.tgz"
+  integrity sha512-EESsMAtyzYcL3gpAI2NKKiIo+Ew0fnX4P4b3Zy/+MTc6SJIo3foJbZwdIWd/SUBswOf7IYCvWBppg+D8tbwnsw==
   dependencies:
     react-freeze "^1.0.0"
-    react-native-is-edge-to-edge "^1.1.7"
+    react-native-is-edge-to-edge "^1.2.1"
     warn-once "^0.1.0"
 
 react-native-snap-carousel@^3.9.1:

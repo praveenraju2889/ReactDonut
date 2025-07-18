@@ -10,8 +10,10 @@ import { NotificationsScreen } from './src/screens/NotificationScreen';
 import { ProfileScreen } from './src/screens/ProfileScreen';
 import { SettingsScreen } from './src/screens/SettingsScreen';
 import { HomeScreen } from './src/screens/HomeScreen';
-//import { DrawerNavigator } from './src/navigation/DrawerNavigator'; // Importing DrawerNavigator
+import DrawerNavigator from './src/navigation/DrawerNavigator'; // Importing DrawerNavigator
 // Assuming HomeScreen is defined in
+import AppNavigator from './src/navigation/DrawerNavigator';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -24,7 +26,7 @@ const App = () => {
   // );
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      {/* <Stack.Navigator initialRouteName="Login" navbarMode="none">
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
         <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
@@ -33,7 +35,9 @@ const App = () => {
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
         <Stack.Screen name='Home' component={HomeScreen} />
-      </Stack.Navigator>
+      </Stack.Navigator> */}
+      {/* <DrawerNavigator />  */}
+            <AppNavigator />
 
     </NavigationContainer>
   );

@@ -16,7 +16,9 @@ const LoginScreen = ({ navigation }) => {
       const result = await login(username, password);
       if (result) {
         //Alert.alert('Login Successful', result.message);
-        navigation.navigate('Dashboard');
+        //navigation.navigate('Dashboard');
+        navigation.replace('Dashboard');
+
       } else {
         Alert.alert('Login Failed', result.message);
       }
@@ -32,6 +34,7 @@ const LoginScreen = ({ navigation }) => {
     }
     // Mock login success
     //Alert.alert('Success', `Welcome, ${username}!`);
+
     navigation.navigate('Donut', { username }); // Navigate to DonutChart screen
   };
 
