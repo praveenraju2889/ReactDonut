@@ -3,6 +3,8 @@ import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { styles } from './LoginScreen.styles';
 import { DonutChart } from '././src/features/donutChart';
 import { login } from '../../services/LoginService'; // Adjust path
+import { useDispatch, useSelector } from 'react-redux';
+import { login1, logout } from '../../redux/authSlice';
 
 
 
@@ -17,6 +19,7 @@ const LoginScreen = ({ navigation }) => {
       if (result) {
         //Alert.alert('Login Successful', result.message);
         //navigation.navigate('Dashboard');
+        
         navigation.replace('Dashboard');
 
       } else {

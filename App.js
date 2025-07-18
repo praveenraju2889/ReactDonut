@@ -13,6 +13,8 @@ import { HomeScreen } from './src/screens/HomeScreen';
 import DrawerNavigator from './src/navigation/DrawerNavigator'; // Importing DrawerNavigator
 // Assuming HomeScreen is defined in
 import AppNavigator from './src/navigation/DrawerNavigator';
+import { Provider } from 'react-redux';
+import store from './src/redux/store';
 
 
 const Stack = createNativeStackNavigator();
@@ -25,6 +27,8 @@ const App = () => {
   // </View>
   // );
   return (
+
+
     <NavigationContainer>
       {/* <Stack.Navigator initialRouteName="Login" navbarMode="none">
         <Stack.Screen name="Login" component={LoginScreen} />
@@ -37,9 +41,10 @@ const App = () => {
         <Stack.Screen name='Home' component={HomeScreen} />
       </Stack.Navigator> */}
       {/* <DrawerNavigator />  */}
-            <AppNavigator />
+      <AppNavigator />
 
     </NavigationContainer>
+
   );
 };
 
